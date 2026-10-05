@@ -10,6 +10,17 @@
 
 Spec: `docs/superpowers/specs/2026-10-04-german-language-design.md`
 
+## Implementation status (2026-10-05)
+
+- Frontend Tasks 1–6 implemented in commit `c12195c4`; translation commits grouped with the runtime changes. The existing pnpm lockfile is used instead of introducing an npm lockfile. React remains at the repository's current version (18).
+- All 26 German namespaces pass key parity and per-key interpolation, nesting, and markup checks. Full frontend suite: 86 files / 1,091 tests passed; subsequent focused run including four additional integration tests: 4 files / 80 tests passed. Typecheck and production build passed; the build includes all 26 German locale files.
+- Strict repository-wide Biome fails on existing line-ending formatting (452 diagnostics at the initial run). Repository-wide lint with formatting disabled passes; all seven changed TypeScript files pass the full Biome check. No unrelated source formatting was applied.
+- Hook and root-route failing tests were verified before implementation. Initial locale red test hit the global setup's browser requirement; untranslated-namespace red runs were not repeated. Backend red test was blocked by NuGet DNS. These historical steps remain unchecked.
+- Backend Task 7 implemented in commit `7b603825`: default, language seed, generated migration, and model snapshot. Migration Up/Down only insert/delete German language row 3, with no unrelated model drift. Configuration tests: 30 passed; final compile including the generated migration and full backend suite: 1,741 passed. Host build passed. Migration generation required placeholder DB connection variables and explicit container DNS in this environment.
+- HTTP smoke check passed for German HTML and served German common/settings resources. Interactive browser and Settings save smoke test remains outstanding because the browser execution tool is unavailable. No deployment or live database migration was performed.
+- Report-only English scan found `No results` in `src/routes/game-nights/-components/MultiSelectField.tsx:157`.
+- Push remains blocked by missing GitHub credentials: Git Credential Manager waited for interactive sign-in; the noninteractive retry failed with `unable to get password from user`. Implementation commits are local on `feat/german-language`. After authenticating Git, run `git push -u origin feat/german-language`.
+
 ## Global Constraints
 
 - Branch: `feat/german-language`. Remote `origin` = `FlorianSchneiderIU/BoardGameTracker`, `upstream` = `mregni/BoardGameTracker`.
@@ -75,7 +86,7 @@ Spec: `docs/superpowers/specs/2026-10-04-german-language-design.md`
 **Interfaces:**
 - Produces: test file `src/utils/locales.test.ts` whose test names are `de-DE/<namespace>.json matches base keys`, filterable with `-t`.
 
-- [ ] **Step 1: Write the parity test**
+- [x] **Step 1: Write the parity test**
 
 `boardgametracker.client/src/utils/locales.test.ts`:
 
@@ -118,7 +129,7 @@ describe("de-DE locale", () => {
 Run (in `boardgametracker.client/`): `npx vitest run src/utils/locales.test.ts`
 Expected: FAIL — 52 failing tests (`existsSync(...)` is `false` for every namespace).
 
-- [ ] **Step 3: Add the `german` label to every locale's `language.json`**
+- [x] **Step 3: Add the `german` label to every locale's `language.json`**
 
 Replace the content of each of `public/locales/{base,en-US,es-ES,nl-BE,nl-NL}/language.json` with:
 
@@ -130,18 +141,18 @@ Replace the content of each of `public/locales/{base,en-US,es-ES,nl-BE,nl-NL}/la
 }
 ```
 
-- [ ] **Step 4: Translate the 18 small namespaces**
+- [x] **Step 4: Translate the 18 small namespaces**
 
 For each of `auth, bgg-import, chat, common, compare, dashboard, error, expansions, images, language, location, log-levels, not-found, rsvp, sessions, shames, statistics, version`: read `public/locales/base/<ns>.json` and write `public/locales/de-DE/<ns>.json` with identical structure and German values, following every rule in Global Constraints. `de-DE/language.json` is exactly the JSON from Step 3.
 
-- [ ] **Step 5: Run the parity test for these namespaces**
+- [x] **Step 5: Run the parity test for these namespaces**
 
 Run: `npx vitest run src/utils/locales.test.ts -t "auth|bgg-import|chat|common|compare|dashboard|error|expansions|images|language|location|log-levels|not-found|rsvp|sessions|shames|statistics|version"`
 Expected: PASS for all 36 matching tests. (Unfiltered, the remaining 8 namespaces still fail until Tasks 2–3; that is expected.)
 
 Note: `-t` is a regex over test names. None of these alternatives is a substring of an untranslated namespace (`game`/`player` are deliberately absent).
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add boardgametracker.client/src/utils/locales.test.ts boardgametracker.client/public/locales
@@ -163,16 +174,16 @@ git commit -m "feat(i18n): add German translations for core namespaces"
 Run (in `boardgametracker.client/`): `npx vitest run src/utils/locales.test.ts -t "badges|game|loans|player"`
 Expected: FAIL for the 7 target files (`game`, `games`, `game-nights`, `player`, `player-session`, `badges`, `loans`).
 
-- [ ] **Step 2: Translate**
+- [x] **Step 2: Translate**
 
 For each of `badges, game, games, game-nights, loans, player, player-session`: read `public/locales/base/<ns>.json`, write `public/locales/de-DE/<ns>.json` with identical structure and German values per Global Constraints. In `badges.json`, badge titles are short nouns ("Sammler", "Marathon") and descriptions full sentences.
 
-- [ ] **Step 3: Run the parity test**
+- [x] **Step 3: Run the parity test**
 
 Run: `npx vitest run src/utils/locales.test.ts -t "badges|game|loans|player"`
 Expected: PASS (14 tests).
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add boardgametracker.client/public/locales/de-DE
@@ -194,16 +205,16 @@ git commit -m "feat(i18n): add German translations for game and player namespace
 Run (in `boardgametracker.client/`): `npx vitest run src/utils/locales.test.ts -t "settings"`
 Expected: FAIL (2 tests).
 
-- [ ] **Step 2: Translate**
+- [x] **Step 2: Translate**
 
 Read `public/locales/base/settings.json` (338 lines), write `public/locales/de-DE/settings.json` per Global Constraints. Technical terms that German admins expect in English stay English: "API Key" → "API-Schlüssel", "Base URL" → "Basis-URL", "Embedding" stays "Embedding", "Top K" stays, "OIDC Provider" → "OIDC-Anbieter", "Client ID/Secret" stay.
 
-- [ ] **Step 3: Run the full parity test**
+- [x] **Step 3: Run the full parity test**
 
 Run: `npx vitest run src/utils/locales.test.ts`
 Expected: PASS (52 tests).
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add boardgametracker.client/public/locales/de-DE/settings.json
@@ -222,7 +233,7 @@ git commit -m "feat(i18n): add German translations for settings"
 **Interfaces:**
 - Produces: `export const DEFAULT_LANGUAGE = "de-DE"` and `export const SUPPORTED_LANGUAGES` from `@/utils/i18n`.
 
-- [ ] **Step 1: Replace the header and `init` of `src/utils/i18n.ts`**
+- [x] **Step 1: Replace the header and `init` of `src/utils/i18n.ts`**
 
 Keep the `namespaces` array and the `capitalize` formatter unchanged. Replace the imports, the `translationFilePath` block and the `init` call with:
 
@@ -268,21 +279,21 @@ void i18n
 	});
 ```
 
-- [ ] **Step 2: Remove the unused detector dependency**
+- [x] **Step 2: Remove the unused detector dependency**
 
 Run (in `boardgametracker.client/`): `npm uninstall i18next-browser-languagedetector`
 Expected: `package.json` and `package-lock.json` no longer list it.
 
-- [ ] **Step 3: Default `<html lang>`**
+- [x] **Step 3: Default `<html lang>`**
 
 In `boardgametracker.client/index.html` line 2 change `<html lang="en" class="dark-theme">` to `<html lang="de" class="dark-theme">`.
 
-- [ ] **Step 4: Typecheck and lint**
+- [x] **Step 4: Typecheck and lint**
 
 Run: `npm run typecheck && npm run lint`
 Expected: exit code 0, no errors.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add boardgametracker.client/src/utils/i18n.ts boardgametracker.client/index.html boardgametracker.client/package.json boardgametracker.client/package-lock.json
@@ -300,7 +311,7 @@ git commit -m "feat(i18n): default UI language to German"
 **Interfaces:**
 - Produces: `export const toI18nLanguage = (code: string): string` (`"de-de"` → `"de-DE"`) and `export const useUiLanguageSync = (uiLanguage: string | undefined | null): void`.
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 `boardgametracker.client/src/hooks/useUiLanguageSync.test.ts`:
 
@@ -370,12 +381,12 @@ describe("useUiLanguageSync", () => {
 });
 ```
 
-- [ ] **Step 2: Run it to verify it fails**
+- [x] **Step 2: Run it to verify it fails**
 
 Run (in `boardgametracker.client/`): `npx vitest run src/hooks/useUiLanguageSync.test.ts`
 Expected: FAIL — cannot resolve `./useUiLanguageSync`.
 
-- [ ] **Step 3: Implement**
+- [x] **Step 3: Implement**
 
 `boardgametracker.client/src/hooks/useUiLanguageSync.ts`:
 
@@ -404,12 +415,12 @@ export const useUiLanguageSync = (uiLanguage: string | undefined | null) => {
 };
 ```
 
-- [ ] **Step 4: Run tests to verify they pass**
+- [x] **Step 4: Run tests to verify they pass**
 
 Run: `npx vitest run src/hooks/useUiLanguageSync.test.ts`
 Expected: PASS (6 tests).
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add boardgametracker.client/src/hooks/useUiLanguageSync.ts boardgametracker.client/src/hooks/useUiLanguageSync.test.ts
@@ -427,7 +438,7 @@ git commit -m "feat(i18n): add hook that applies the settings UI language"
 **Interfaces:**
 - Consumes: `useUiLanguageSync(uiLanguage)` from `@/hooks/useUiLanguageSync` (Task 5); `getSettings()` from `@/services/queries/settings` (existing, `queryKey: [QUERY_KEYS.settings]`, returns `Settings` with `uiLanguage: string`). Saving settings already invalidates this query (`routes/settings/-hooks/useSettingsData.ts:25`), so a changed language propagates automatically.
 
-- [ ] **Step 1: Extend the root test mocks**
+- [x] **Step 1: Extend the root test mocks**
 
 In `src/routes/__root.test.tsx`:
 
@@ -443,7 +454,7 @@ vi.mock("@/hooks/useUiLanguageSync", () => ({
 
 4. In the top-level `beforeEach`, add: `mocks.getSettingsCall.mockResolvedValue({ uiLanguage: "de-de" });`
 
-- [ ] **Step 2: Add the failing tests**
+- [x] **Step 2: Add the failing tests**
 
 Append inside `describe("RootComponent", ...)`:
 
@@ -471,12 +482,12 @@ Append inside `describe("RootComponent", ...)`:
 	});
 ```
 
-- [ ] **Step 3: Run to verify failure**
+- [x] **Step 3: Run to verify failure**
 
 Run (in `boardgametracker.client/`): `npx vitest run src/routes/__root.test.tsx`
 Expected: FAIL — "applies the settings language" (`useUiLanguageSync` never called).
 
-- [ ] **Step 4: Implement in `__root.tsx`**
+- [x] **Step 4: Implement in `__root.tsx`**
 
 Add imports:
 
@@ -495,12 +506,12 @@ In `RootComponent`, directly after the third `useEffect` (the one fetching `getE
 	useUiLanguageSync(settings?.uiLanguage);
 ```
 
-- [ ] **Step 5: Run tests**
+- [x] **Step 5: Run tests**
 
 Run: `npx vitest run src/routes/__root.test.tsx`
 Expected: PASS (all existing tests plus the 2 new ones).
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add boardgametracker.client/src/routes/__root.tsx boardgametracker.client/src/routes/__root.test.tsx
@@ -528,7 +539,7 @@ DOTNET='MSYS_NO_PATHCONV=1 docker run --rm -v C:/Repositories/BoardGameTrackerFo
 
 (use as `eval "$DOTNET dotnet test ..."`). The `bgt-nuget` volume caches packages between runs.
 
-- [ ] **Step 1: Update the expected default in the test**
+- [x] **Step 1: Update the expected default in the test**
 
 `BoardGameTracker.Tests/Configuration/ConfigDefaultsTests.cs` line 17:
 
@@ -541,7 +552,7 @@ DOTNET='MSYS_NO_PATHCONV=1 docker run --rm -v C:/Repositories/BoardGameTrackerFo
 Run: `eval "$DOTNET dotnet test BoardGameTracker.Tests --filter FullyQualifiedName~ConfigDefaultsTests"`
 Expected: FAIL — `Expected entry!.Value to be "de-de" ... but "en-us"`.
 
-- [ ] **Step 3: Change the default**
+- [x] **Step 3: Change the default**
 
 `BoardGameTracker.Common/Configuration/ConfigDefaults.cs` line 14:
 
@@ -549,12 +560,12 @@ Expected: FAIL — `Expected entry!.Value to be "de-de" ... but "en-us"`.
         new(AppConfig.UiLanguage, "de-de"),
 ```
 
-- [ ] **Step 4: Run to verify it passes**
+- [x] **Step 4: Run to verify it passes**
 
 Run: `eval "$DOTNET dotnet test BoardGameTracker.Tests --filter FullyQualifiedName~ConfigDefaultsTests"`
 Expected: PASS.
 
-- [ ] **Step 5: Seed the language**
+- [x] **Step 5: Seed the language**
 
 `BoardGameTracker.Core/Datastore/MainDbContext.cs`, `SeedLanguages`:
 
@@ -566,7 +577,7 @@ Expected: PASS.
             );
 ```
 
-- [ ] **Step 6: Generate the migration**
+- [x] **Step 6: Generate the migration**
 
 Run:
 
@@ -576,7 +587,7 @@ eval "$DOTNET bash -c 'dotnet tool install --global dotnet-ef --version 10.* >/d
 
 Expected: `Done.` and new files `*_AddGermanLanguage.cs` / `*_AddGermanLanguage.Designer.cs`; `MainDbContextModelSnapshot.cs` modified.
 
-- [ ] **Step 7: Inspect the migration**
+- [x] **Step 7: Inspect the migration**
 
 `*_AddGermanLanguage.cs` `Up` must contain only:
 
@@ -589,12 +600,12 @@ Expected: `Done.` and new files `*_AddGermanLanguage.cs` / `*_AddGermanLanguage.
 
 and `Down` the matching `DeleteData(table: "Languages", keyColumn: "Id", keyValue: 3)`. If anything else appears (unrelated model drift), stop and report it rather than committing it.
 
-- [ ] **Step 8: Build and run all backend tests**
+- [x] **Step 8: Build and run all backend tests**
 
 Run: `eval "$DOTNET dotnet test BoardGameTracker.Tests"`
 Expected: build succeeds, all tests pass.
 
-- [ ] **Step 9: Commit**
+- [x] **Step 9: Commit**
 
 ```bash
 git add BoardGameTracker.Common BoardGameTracker.Core BoardGameTracker.Tests
@@ -612,12 +623,12 @@ git commit -m "feat: seed German language and make it the default UI language"
 Run: `npm run typecheck && npm run lint && npx vitest run`
 Expected: all exit 0; full Vitest suite passes.
 
-- [ ] **Step 2: Production build**
+- [x] **Step 2: Production build**
 
 Run: `npm run build`
 Expected: build succeeds; `dist/locales/de-DE/` contains 26 files (`ls dist/locales/de-DE | wc -l` → `26`).
 
-- [ ] **Step 3: Hard-coded English scan (report only)**
+- [x] **Step 3: Hard-coded English scan (report only)**
 
 Run: `grep -rnE '>[A-Z][a-z]+( [a-z]+)*<' src --include=*.tsx | grep -v test | head -50`
 Record any user-visible literal English strings in the final report as follow-ups; do not fix them in this branch.
