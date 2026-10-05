@@ -349,7 +349,8 @@ public class MainDbContext : IdentityDbContext<ApplicationUser>
             .Entity<Language>()
             .HasData(
                 new Language {Id = 1, Key = "en-us", TranslationKey = "english"},
-                new Language {Id = 2, Key = "nl-be", TranslationKey = "dutch"}
+                new Language {Id = 2, Key = "nl-be", TranslationKey = "dutch"},
+                new Language {Id = 3, Key = "de-de", TranslationKey = "german"}
             );
     }
 

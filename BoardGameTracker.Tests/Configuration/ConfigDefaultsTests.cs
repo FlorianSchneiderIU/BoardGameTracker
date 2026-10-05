@@ -14,7 +14,7 @@ public class ConfigDefaultsTests
         yield return new object[] { AppConfig.Currency, "€" };
         yield return new object[] { AppConfig.DateFormat, "yy-MM-dd" };
         yield return new object[] { AppConfig.TimeFormat, "HH:mm" };
-        yield return new object[] { AppConfig.UiLanguage, "en-us" };
+        yield return new object[] { AppConfig.UiLanguage, "de-de" };
         yield return new object[] { AppConfig.ShelfOfShameEnabled, "true" };
         yield return new object[] { AppConfig.ShelfOfShameMonths, "6" };
         yield return new object[] { AppConfig.GameNightsEnabled, "true" };

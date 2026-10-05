@@ -11,7 +11,7 @@ public static class ConfigDefaults
         new(AppConfig.Currency, "€"),
         new(AppConfig.DateFormat, "yy-MM-dd"),
         new(AppConfig.TimeFormat, "HH:mm"),
-        new(AppConfig.UiLanguage, "en-us"),
+        new(AppConfig.UiLanguage, "de-de"),
         new(AppConfig.ShelfOfShameEnabled, "true"),
         new(AppConfig.ShelfOfShameMonths, "6"),
         new(AppConfig.GameNightsEnabled, "true"),

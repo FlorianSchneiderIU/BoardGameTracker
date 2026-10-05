@@ -965,6 +965,12 @@ namespace BoardGameTracker.Core.DataStore.Migrations.Postgres
                             Id = 2,
                             Key = "nl-be",
                             TranslationKey = "dutch"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Key = "de-de",
+                            TranslationKey = "german"
                         });
                 });
 
