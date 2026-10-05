@@ -1,0 +1,15 @@
+{
+  "welcome-back-title": "Willkommen zurück, {{name}}!",
+  "welcome-back_one": "Sie haben {{count}} Partie gespielt.",
+  "welcome-back_other": "Sie haben {{count}} Partien gespielt.",
+  "empty": {
+    "title": "Keine Spiele in der Sammlung",
+    "description": "Noch keine Spiele zur Sammlung hinzugefügt. Mit dem ersten Spiel beginnen, um Partien und Statistiken zu erfassen.",
+    "button": "Erstes Spiel hinzufügen"
+  },
+  "charts": {
+    "collection": "Sammlung"
+  },
+  "recent-activity": "Letzte Aktivitäten",
+  "recent-added-games": "Zuletzt hinzugefügte Spiele"
+}

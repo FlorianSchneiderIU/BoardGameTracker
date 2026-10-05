@@ -1,0 +1,55 @@
+{
+  "empty": {
+    "title": "Noch keine Spieler hinzugefügt",
+    "description": "Noch keine Spieler hinzugefügt. Mit dem ersten Spieler beginnen, um Partien und Statistiken zu erfassen.",
+    "button": "Ersten Spieler hinzufügen"
+  },
+  "back": "Zurück zu den Spielern",
+  "count_other": "{{count}} Spieler gefunden",
+  "count_one": "{{count}} Spieler gefunden",
+  "notifications": {
+    "created": "Spieler erfolgreich erstellt",
+    "create-failed": "Spieler konnte nicht erstellt werden",
+    "not-found": "Spieler nicht gefunden",
+    "deleted": "Spieler erfolgreich gelöscht",
+    "delete-failed": "Spieler konnte nicht gelöscht werden",
+    "updated": "Spieler erfolgreich aktualisiert",
+    "update-failed": "Spieler konnte nicht aktualisiert werden"
+  },
+  "name": {
+    "placeholder": "Name des Spielers eingeben",
+    "required": "Spielername ist erforderlich"
+  },
+  "email": {
+    "label": "E-Mail",
+    "placeholder": "E-Mail-Adresse des Spielers eingeben",
+    "invalid": "Gültige E-Mail-Adresse eingeben"
+  },
+  "new": {
+    "button": "Neuen Spieler hinzufügen",
+    "description": "Formular ausfüllen, um einen neuen Spieler zu erstellen.",
+    "save": "Spieler erstellen",
+    "title": "Spieler erstellen",
+    "players": {
+      "none": "Noch keine Spieler hinzugefügt. Ersten Spieler hinzufügen!"
+    }
+  },
+  "update": {
+    "save": "Spieler aktualisieren",
+    "title": "Spieler aktualisieren",
+    "description": "Namen oder Bild ändern, um den Spieler zu aktualisieren."
+  },
+  "delete": {
+    "successfull": "Spieler erfolgreich gelöscht.",
+    "failed": "Spieler konnte nicht gelöscht werden. Weitere Details stehen in den Protokollen.",
+    "description": "Soll der Spieler {{name}} gelöscht werden? Dies kann nicht rückgängig gemacht werden und löscht alle mit diesem Spieler verknüpften Partien."
+  },
+  "cards": {
+    "games": "Spiele",
+    "win-record": "Siege und Niederlagen",
+    "most-played-games": "Meistgespielte Spiele"
+  },
+  "titles": {
+    "achievements": "Erfolge"
+  }
+}

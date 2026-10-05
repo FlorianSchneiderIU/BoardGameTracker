@@ -1,4 +1,4 @@
-import type { QueryClient } from "@tanstack/react-query";
+import { type QueryClient, useQuery } from "@tanstack/react-query";
 import {
 	createRootRouteWithContext,
 	type ErrorComponentProps,
@@ -12,8 +12,9 @@ import { ErrorBoundary } from "react-error-boundary";
 import { ErrorFallback } from "@/components/ErrorBoundary/ErrorFallback";
 import { NotFound } from "@/components/NotFound/NotFound";
 import { useAuth } from "@/hooks/useAuth";
+import { useUiLanguageSync } from "@/hooks/useUiLanguageSync";
 import type { MenuItem } from "@/models";
-import { getEnvironment } from "@/services/queries/settings";
+import { getEnvironment, getSettings } from "@/services/queries/settings";
 import { initSentry } from "@/utils/sentry";
 import { BottomNav } from "./-components/BottomNav";
 import { Sidebar } from "./-components/Sidebar";
@@ -70,6 +71,10 @@ function RootComponent() {
 			})
 			.catch(() => {});
 	}, [authChecked, isAuthenticated, authStatus, queryClient]);
+
+	const canLoadSettings = authChecked && (isAuthenticated || authStatus?.authEnabled === false);
+	const { data: settings } = useQuery({ ...getSettings(), enabled: canLoadSettings });
+	useUiLanguageSync(canLoadSettings ? settings?.uiLanguage : undefined);
 
 	if (!authChecked) {
 		return (

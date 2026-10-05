@@ -1,0 +1,82 @@
+{
+  "back": "Zurück zu den Spielen",
+  "import": {
+    "loading": "BGG-Daten werden geladen...",
+    "importing": "Spiele werden von BoardGameGeek importiert...",
+    "success": "Spiele erfolgreich von BoardGameGeek importiert",
+    "failed": "Spiele konnten nicht von BoardGameGeek importiert werden. Weitere Details stehen in den Protokollen.",
+    "start": {
+      "bgg-username": {
+        "label": "BGG-Benutzername",
+        "required": "BGG-Benutzername ist erforderlich"
+      },
+      "title": "Spiele von BoardGameGeek importieren",
+      "description": "Spielesammlung von BoardGameGeek importieren. Im nächsten Schritt können die zu importierenden Spiele ausgewählt werden.",
+      "button": "Spiele importieren"
+    },
+    "start-import": "Import starten ({{count}}/{{totalCount}})",
+    "intro": "In der BGG-Sammlung wurden {{count}} Spiele gefunden. Davon sind {{collectionCount}} bereits in der lokalen Sammlung enthalten. Zu importierende Spiele auswählen. Maximal {{maxImport}} Spiele gleichzeitig auswählen, um die BGG-Website nicht zu überlasten.",
+    "error-title": "BGG-Sammlung konnte nicht geladen werden",
+    "error-description": "Beim Abrufen der Sammlung von BoardGameGeek ist ein Fehler aufgetreten. Bitte den API-Schlüssel in den Einstellungen prüfen und erneut versuchen.",
+    "hide-collected": "Bereits in der Sammlung enthaltene Spiele ausblenden"
+  },
+  "title": "Spiele",
+  "new": "Neues Spiel hinzufügen",
+  "count_other": "{{count}} Spiele gefunden",
+  "count_one": "{{count}} Spiel gefunden",
+  "cards": {
+    "games": "Spiele"
+  },
+  "filters": {
+    "category": "Kategorie",
+    "player-count": "Spieler",
+    "play-time": "Spielzeit",
+    "weight": "Komplexität",
+    "any": "Beliebig",
+    "in-stock-only": "Nur verfügbare Spiele",
+    "player-count-value_one": "{{count}} Spieler",
+    "player-count-value_other": "{{count}} Spieler",
+    "play-time-value": "≤ {{count}} Min.",
+    "weight-light": "Leicht (< 2)",
+    "weight-medium": "Mittel (2 - 3)",
+    "weight-heavy": "Schwer (> 3)",
+    "age": "Alter",
+    "age-0-6": "≤ 6",
+    "age-7-9": "7 - 9",
+    "age-10-12": "10 - 12",
+    "age-13plus": "13+",
+    "show-more": "Mehr Filter anzeigen",
+    "show-less": "Weniger Filter anzeigen"
+  },
+  "columns": {
+    "title": "Titel",
+    "language": "Sprache",
+    "state": "Status",
+    "price": "Preis",
+    "shop": "Shop",
+    "players": "Spieler",
+    "play-time": "Spielzeit",
+    "weight": "Komplexität",
+    "rating": "Bewertung",
+    "added": "Hinzugefügt",
+    "bgg": "BGG",
+    "current-price": "Aktueller Preis"
+  },
+  "table": {
+    "title": "Spieleliste",
+    "total-games": "Spiele insgesamt",
+    "total-price": "Gesamtpreis",
+    "mean-price": "Durchschnittspreis",
+    "empty": "Keine Spiele entsprechen den ausgewählten Filtern."
+  },
+  "in-stock": {
+    "yes": "Auf Lager",
+    "no": "Nicht auf Lager"
+  },
+  "refresh-prices": "Preise aktualisieren",
+  "live-price": {
+    "unavailable": "Preis nicht verfügbar"
+  },
+  "tracked": "Preisüberwachung aktiv",
+  "tracked-pending": "Warten auf die erste Preisprüfung"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Seite nicht gefunden",
+  "subtitle": "Diese Seite hat wohl einen kritischen Fehlschlag gewürfelt!",
+  "description": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+  "go-back": "Zurück",
+  "quick-nav": "Schnellnavigation",
+  "nav": {
+    "dashboard-description": "Spielstatistiken ansehen",
+    "games-description": "Sammlung durchstöbern",
+    "players-description": "Spielerprofile ansehen",
+    "game-nights-description": "Nächste Partie planen"
+  }
+}

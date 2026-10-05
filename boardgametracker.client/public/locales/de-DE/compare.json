@@ -1,0 +1,53 @@
+{
+  "title": "Spieler vergleichen",
+  "select-player": "Spieler für den Vergleich auswählen",
+  "total-games-played": "Gemeinsame Partien insgesamt",
+  "minutes-played": "Gespielte Minuten",
+  "most-played-game": "Meistgespieltes Spiel",
+  "wins": {
+    "winner": "{{player}} hat {{winCount}} Mal gegen {{otherPlayer}} gewonnen",
+    "loser": "{{player}} hat nur {{winCount}} Mal gegen {{otherPlayer}} gewonnen"
+  },
+  "best-game": {
+    "label": "Das beste Spiel von {{player}} gegen {{otherPlayer}} ist {{game}} mit {{count}} Siegen"
+  },
+  "total-wins": {
+    "label": "{{player}} hat insgesamt {{count}} Partien gewonnen."
+  },
+  "win-percentage": {
+    "label": "{{player}} hat eine Siegquote von {{percentage}}%"
+  },
+  "total-duration": {
+    "label": "{{player}} hat insgesamt {{duration}} Minuten gespielt."
+  },
+  "total-sessions": {
+    "label": "{{player}} hat insgesamt {{count}} Partien gespielt."
+  },
+  "head-to-head": {
+    "title": "Direktvergleich",
+    "direct-wins": "{{player}} hat {{count}} Mal gegen {{opponent}} gewonnen",
+    "most-won-game": "{{player}} hat am häufigsten in {{game}} gegen {{opponent}} gewonnen ({{count}} Mal)",
+    "last-session": "Die letzte Partie wurde von {{player}} in {{game}} gewonnen",
+    "most-played-together": "Am häufigsten gemeinsam gespielt: {{game}} ({{count}} Partien)",
+    "closest-game": "{{player}} hat in {{game}} mit nur {{points}} Punkten Vorsprung gewonnen",
+    "first-game-together": "Erste gemeinsame Partie: {{game}} am {{date}}"
+  },
+  "stats": {
+    "total-wins": "Siege insgesamt",
+    "win-percentage": "Siegquote",
+    "sessions": "Partien",
+    "total-duration": "Gesamte Spielzeit",
+    "player-stats": "Statistiken von {{player}}"
+  },
+  "empty": {
+    "insufficient-players": {
+      "title": "Nicht genügend Spieler für einen Vergleich",
+      "description": "In der Datenbank gibt es nicht genügend Spieler, um Statistiken und Ergebnisse im Direktvergleich zu vergleichen."
+    },
+    "no-players": {
+      "title": "Keine Spieler für einen Vergleich verfügbar",
+      "description": "In der Datenbank gibt es noch keine Spieler. Spieler hinzufügen, um die Vergleichsfunktion zu nutzen."
+    },
+    "button": "Zur Spielerseite"
+  }
+}

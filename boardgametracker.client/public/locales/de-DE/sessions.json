@@ -1,0 +1,12 @@
+{
+  "new": "Neue Partie hinzufügen",
+  "title": "Partien",
+  "notifications": {
+    "deleted": "Ort erfolgreich gelöscht",
+    "delete-failed": "Ort konnte nicht gelöscht werden"
+  },
+  "delete": {
+    "title": "Partie löschen",
+    "description": "Sollen die Partien gelöscht werden?"
+  }
+}

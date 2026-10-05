@@ -1,0 +1,32 @@
+{
+  "empty": {
+    "title": "Noch keine Orte hinzugefügt",
+    "description": "Noch keine Orte hinzugefügt. Den ersten Ort hinzufügen, um festzuhalten, wo die Spiele gespielt werden."
+  },
+  "new": {
+    "button": "Neuen Ort hinzufügen",
+    "title": "Neuen Ort erstellen",
+    "description": "Namen eingeben, um einen neuen Ort zu erstellen.",
+    "name": {
+      "placeholder": "Name des Ortes",
+      "required": "Name des Ortes ist erforderlich"
+    },
+    "save": "Ort erstellen"
+  },
+  "edit": {
+    "title": "Ort bearbeiten"
+  },
+  "notifications": {
+    "created": "Ort erfolgreich erstellt",
+    "create-failed": "Ort konnte nicht erstellt werden",
+    "failed": "Ort konnte nicht erstellt werden",
+    "update": "Ort erfolgreich aktualisiert",
+    "update-failed": "Ort konnte nicht aktualisiert werden",
+    "deleted": "Ort erfolgreich gelöscht",
+    "delete-failed": "Ort konnte nicht gelöscht werden"
+  },
+  "delete": {
+    "description": "Soll der Ort '{{name}}' gelöscht werden?",
+    "extra-description": "Der Ort ist mit {{count}} Partien verknüpft. Diese Verknüpfungen werden entfernt."
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "rsvp": {
+    "title": "Zusagen verwalten",
+    "manual-note-prefix": "Zusage manuell festlegen",
+    "manual-note": " für Spieler, die telefonisch, per Nachricht oder persönlich geantwortet haben.",
+    "accept": "Zusagen",
+    "decline": "Absagen",
+    "maybe": "Vielleicht",
+    "host": "Der Gastgeber nimmt immer teil"
+  },
+  "empty": {
+    "title": "Noch keine Spieleabende geplant",
+    "description": "Spieler einladen, um einen Spieleabend zu planen."
+  },
+  "delete": {
+    "title": "Spieleabend löschen",
+    "description": "Soll der Spieleabend \"{{title}}\" gelöscht werden? Dies kann nicht rückgängig gemacht werden und löscht alle zugehörigen Zusagen."
+  },
+  "title": "Spieleabendplaner",
+  "create": {
+    "button": "Spieleabend erstellen",
+    "title": "Neuen Spieleabend erstellen",
+    "description": "Formular ausfüllen, um einen neuen Spieleabend zu erstellen.",
+    "save": "Spieleabend erstellen"
+  },
+  "edit": {
+    "title": "Spieleabend bearbeiten",
+    "description": "Details dieses Spieleabends aktualisieren.",
+    "save": "Änderungen speichern"
+  },
+  "upcoming": "Bevorstehende Spieleabende",
+  "past": "Vergangene Spieleabende",
+  "card": {
+    "hosted-by": "Veranstaltet von {{host}}",
+    "suggested-games": "Vorgeschlagene Spiele",
+    "rsvp-link": "Zusagelink",
+    "upcoming": "Bevorstehend",
+    "past": "Vergangen",
+    "copy-link": "Zusagelink kopieren",
+    "copied": "In die Zwischenablage kopiert",
+    "manage-rsvps": "Zusagen verwalten",
+    "email-invites": "Einladungen per E-Mail senden",
+    "invites-sent": "Einladungen gesendet: {{sent}}",
+    "invites-failed": "Einladungen konnten nicht gesendet werden"
+  },
+  "form": {
+    "title": {
+      "label": "Veranstaltungstitel",
+      "placeholder": "Titel des Spieleabends eingeben"
+    },
+    "start": {
+      "label": "Datum"
+    },
+    "location": {
+      "label": "Ort",
+      "placeholder": "Ort eingeben"
+    },
+    "host": {
+      "label": "Gastgeber",
+      "placeholder": "Gastgeber auswählen"
+    },
+    "invited-players": {
+      "label": "Eingeladene Spieler",
+      "description": "Spieler auswählen, die zu diesem Spieleabend eingeladen werden sollen"
+    },
+    "suggested-games": {
+      "label": "Vorgeschlagene Spiele",
+      "description": "Spiele auswählen, die für diesen Spieleabend vorgeschlagen werden"
+    },
+    "notes": {
+      "label": "Notizen"
+    }
+  },
+  "notifications": {
+    "created": "Spieleabend erfolgreich erstellt",
+    "create-failed": "Spieleabend konnte nicht erstellt werden",
+    "updated": "Spieleabend erfolgreich aktualisiert",
+    "update-failed": "Spieleabend konnte nicht aktualisiert werden",
+    "deleted": "Spieleabend erfolgreich gelöscht",
+    "delete-failed": "Spieleabend konnte nicht gelöscht werden",
+    "rsvp-updated": "Zusage erfolgreich aktualisiert",
+    "rsvp-update-failed": "Zusage konnte nicht aktualisiert werden"
+  }
+}

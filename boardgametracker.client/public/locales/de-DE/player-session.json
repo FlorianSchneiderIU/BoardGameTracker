@@ -1,0 +1,76 @@
+{
+  "save-new": "Partie erstellen",
+  "save-update": "Partie aktualisieren",
+  "title-new": "Neue Partie hinzufügen",
+  "title-update": "Partie aktualisieren",
+  "new": {
+    "notifications": {
+      "created": "Partie erfolgreich erstellt",
+      "create-failed": "Partie konnte nicht erstellt werden"
+    },
+    "save": "Spieler hinzufügen",
+    "title": "Spieler hinzufügen",
+    "description": "Formular ausfüllen, um einen neuen Spieler zu dieser Partie hinzuzufügen.",
+    "player": {
+      "label": "Spieler",
+      "required": "Spieler ist erforderlich"
+    },
+    "create-player": "Neuen Spieler erstellen",
+    "players": {
+      "label": "Spieler",
+      "add": "+ Spieler hinzufügen",
+      "minimum": "Mindestens einen Spieler zu dieser Partie hinzufügen"
+    },
+    "duration": {
+      "label": "Dauer",
+      "placeholder": "In Minuten",
+      "required": "Dauer ist erforderlich"
+    },
+    "game": {
+      "label": "Spiel",
+      "placeholder": "Spiel auswählen",
+      "required": "Spiel ist erforderlich"
+    },
+    "start": {
+      "label": "Beginn",
+      "required": "Startdatum ist erforderlich",
+      "placeholder": "Datum auswählen"
+    },
+    "location": {
+      "label": "Ort",
+      "placeholder": "Ort auswählen",
+      "create-new": "Ort '{{name}}' erstellen",
+      "required": "Ort ist erforderlich"
+    },
+    "comment": {
+      "label": "Kommentar",
+      "sub-label": "Zusätzlicher Kommentar zum Spiel."
+    }
+  },
+  "update": {
+    "save": "Spieler aktualisieren",
+    "title": "Spieler aktualisieren",
+    "description": "Formular bearbeiten, um die Details von {{name}} zu ändern.",
+    "notifications": {
+      "updated": "Partie erfolgreich erstellt",
+      "update-failed": "Partie konnte nicht erstellt werden"
+    }
+  },
+  "won": {
+    "label": "Spieler hat das Spiel gewonnen"
+  },
+  "bot": {
+    "label": "Spieler ist ein Bot"
+  },
+  "score": {
+    "label": "Endpunktzahl",
+    "required": "Punktzahl ist erforderlich"
+  },
+  "first-play": {
+    "label": "Spiel zum ersten Mal gespielt"
+  },
+  "delete": {
+    "successfull": "Partie erfolgreich gelöscht.",
+    "failed": "Partie konnte nicht gelöscht werden. Weitere Details stehen in den Protokollen."
+  }
+}

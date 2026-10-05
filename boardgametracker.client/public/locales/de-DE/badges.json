@@ -1,0 +1,174 @@
+{
+  "different-games": {
+    "green": {
+      "title": "Entdecker",
+      "description": "3 verschiedene Spiele spielen."
+    },
+    "blue": {
+      "title": "Abenteurer",
+      "description": "10 verschiedene Spiele spielen."
+    },
+    "red": {
+      "title": "Sammler",
+      "description": "20 verschiedene Spiele spielen."
+    },
+    "gold": {
+      "title": "Spielekenner",
+      "description": "50 verschiedene Spiele spielen."
+    }
+  },
+  "sessions": {
+    "green": {
+      "title": "Einsteiger",
+      "description": "5 Partien spielen."
+    },
+    "blue": {
+      "title": "Stammspieler",
+      "description": "10 Partien spielen."
+    },
+    "red": {
+      "title": "Vielspieler",
+      "description": "50 Partien spielen."
+    },
+    "gold": {
+      "title": "Partienmeister",
+      "description": "100 Partien spielen."
+    }
+  },
+  "wins": {
+    "green": {
+      "title": "Erste Siege",
+      "description": "3 Partien gewinnen."
+    },
+    "blue": {
+      "title": "Siegesjäger",
+      "description": "10 Partien gewinnen."
+    },
+    "red": {
+      "title": "Champion",
+      "description": "25 Partien gewinnen."
+    },
+    "gold": {
+      "title": "Legende",
+      "description": "50 Partien gewinnen."
+    }
+  },
+  "duration": {
+    "green": {
+      "title": "Neuling",
+      "description": "5 Stunden spielen."
+    },
+    "blue": {
+      "title": "Zeitinvestor",
+      "description": "10 Stunden spielen."
+    },
+    "red": {
+      "title": "Veteran",
+      "description": "50 Stunden spielen."
+    },
+    "gold": {
+      "title": "Zeitherrscher",
+      "description": "100 Stunden spielen."
+    }
+  },
+  "win-percentage": {
+    "green": {
+      "title": "Glückssträhne",
+      "description": "30% der Partien gewinnen."
+    },
+    "blue": {
+      "title": "Könner",
+      "description": "50% der Partien gewinnen."
+    },
+    "red": {
+      "title": "Dominator",
+      "description": "65% der Partien gewinnen."
+    },
+    "gold": {
+      "title": "Überflieger",
+      "description": "80% der Partien gewinnen."
+    }
+  },
+  "solo-specialist": {
+    "green": {
+      "title": "Einzelgänger",
+      "description": "5 Solopartien spielen."
+    },
+    "blue": {
+      "title": "Solokünstler",
+      "description": "10 Solopartien spielen."
+    },
+    "red": {
+      "title": "Solomeister",
+      "description": "25 Solopartien spielen."
+    },
+    "gold": {
+      "title": "Sololegende",
+      "description": "50 Solopartien spielen."
+    }
+  },
+  "winning-streak": {
+    "green": {
+      "title": "Siegesserie",
+      "description": "5 Partien in Folge gewinnen."
+    },
+    "blue": {
+      "title": "Feuer und Flamme",
+      "description": "10 Partien in Folge gewinnen."
+    },
+    "red": {
+      "title": "Unbesiegbarer",
+      "description": "15 Partien in Folge gewinnen."
+    },
+    "gold": {
+      "title": "Perfektion",
+      "description": "25 Partien in Folge gewinnen."
+    }
+  },
+  "social-player": {
+    "green": {
+      "title": "Freund",
+      "description": "Mit 5 verschiedenen Spielern spielen."
+    },
+    "blue": {
+      "title": "Gesellschafter",
+      "description": "Mit 10 verschiedenen Spielern spielen."
+    },
+    "red": {
+      "title": "Gemeinschaftsstifter",
+      "description": "Mit 25 verschiedenen Spielern spielen."
+    },
+    "gold": {
+      "title": "Menschenfreund",
+      "description": "Mit 50 verschiedenen Spielern spielen."
+    }
+  },
+  "close-win": {
+    "title": "Fotofinish",
+    "description": "Mit höchstens 2 Punkten Vorsprung gewinnen."
+  },
+  "close-loss": {
+    "title": "Beinahe-Sieger",
+    "description": "Mit höchstens 2 Punkten Rückstand verlieren."
+  },
+  "marathon-runner": {
+    "title": "Marathon",
+    "description": "Eine Partie von mindestens 4 Stunden spielen."
+  },
+  "first-try": {
+    "title": "Erstversuch",
+    "description": "Ein Spiel beim ersten Versuch gewinnen."
+  },
+  "learning-curve": {
+    "title": "Lernkurve",
+    "description": "In 3 aufeinanderfolgenden Partien desselben Spiels jeweils eine höhere Punktzahl erreichen."
+  },
+  "monthly-goal": {
+    "title": "Monatsziel",
+    "description": "Mehr als 20 Partien innerhalb eines Monats spielen."
+  },
+  "consistent-schedule": {
+    "title": "Regelmäßigkeit",
+    "description": "10 Wochen in Folge jeden Samstag mindestens eine Partie spielen."
+  }
+}

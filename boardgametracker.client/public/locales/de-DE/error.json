@@ -1,0 +1,51 @@
+{
+  "bgg": {
+    "id-not-found": "Spiel auf BoardGameGeek nicht gefunden"
+  },
+  "image": {
+    "type-not-supported": "Bildtyp wird nicht unterstützt",
+    "error": "Fehler beim Hochladen des Bildes. Weitere Details stehen in den Protokollen.",
+    "too-large": "Bild ist zu groß",
+    "unsupported-format": "Bildformat wird nicht unterstützt"
+  },
+  "auth": {
+    "username-already-exists": "Benutzername existiert bereits",
+    "oidc-no-local-users": "Bei aktiviertem OIDC können keine lokalen Benutzer erstellt werden",
+    "invalid-role": "Ungültige Rolle",
+    "username-required": "Benutzername ist erforderlich",
+    "cannot-change-oidc-password": "Passwort von extern authentifizierten Konten kann nicht geändert werden",
+    "cannot-delete-self": "Das eigene Konto kann nicht gelöscht werden",
+    "cannot-delete-last-admin": "Das letzte Administratorkonto kann nicht gelöscht werden",
+    "cannot-remove-last-admin": "Dem letzten Administratorkonto kann die Administratorrolle nicht entzogen werden",
+    "invalid-credentials": "Ungültiger Benutzername oder ungültiges Passwort",
+    "account-locked-out": "Zu viele fehlgeschlagene Versuche. Bitte später erneut versuchen.",
+    "invalid-refresh-token": "Ungültige oder abgelaufene Sitzung",
+    "invalid-redirect-uri": "Ungültige Weiterleitungs-URI",
+    "invalid-auth-session": "Ungültige oder abgelaufene Authentifizierungssitzung",
+    "player-already-linked": "Dieser Spieler ist bereits mit einem anderen Konto verknüpft",
+    "invalid-reset-token": "Dieser Link zum Zurücksetzen des Passworts ist ungültig oder abgelaufen"
+  },
+  "changedetection": {
+    "invalid-base-url": "Die changedetection.io-URL ist ungültig",
+    "not-configured": "changedetection.io ist nicht konfiguriert",
+    "watch-not-found": "Diese Überwachungs-ID wurde auf changedetection.io nicht gefunden",
+    "create-watch-failed": "changedetection.io konnte die Überwachung nicht erstellen"
+  },
+  "game": {
+    "invalid-shop-url": "Gültige http(s)-URL des Shops eingeben"
+  },
+  "something-went-wrong": "Ein Fehler ist aufgetreten. Bitte später erneut versuchen.",
+  "unexpected-error": "Ein unerwarteter Fehler ist aufgetreten.",
+  "network": "Keine Verbindung zum Server möglich. Bitte die Verbindung prüfen.",
+  "timeout": "Die Anfrage hat zu lange gedauert. Bitte erneut versuchen.",
+  "server": "Ein Serverfehler ist aufgetreten. Bitte später erneut versuchen.",
+  "email": {
+    "not-configured": "E-Mail ist auf diesem Server nicht konfiguriert"
+  },
+  "loan": {
+    "game-already-on-loan": "Dieses Spiel ist bereits ausgeliehen"
+  },
+  "settings": {
+    "invalid-public-url": "Die öffentliche URL ist ungültig"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Ausleihen",
+  "empty": {
+    "title": "Noch keine Ausleihen",
+    "description": "Noch keine Ausleihen erstellt. Ein Spiel verleihen, um festzuhalten, wer die Spiele ausgeliehen hat."
+  },
+  "mark-as-returned": "Zurückgeben",
+  "no-returned-loans": "Noch keine zurückgegebenen Ausleihen.",
+  "statistics": {
+    "active": "Aktive Ausleihen",
+    "returned": "Zurückgegebene Ausleihen",
+    "total-loans": "Ausleihen insgesamt"
+  },
+  "notifications": {
+    "created": "Ausleihe erfolgreich erstellt",
+    "create-failed": "Ausleihe konnte nicht erstellt werden"
+  },
+  "delete": {
+    "button": "Löschen",
+    "description": "Soll diese Ausleihe gelöscht werden? Dies kann nicht rückgängig gemacht werden!",
+    "successfull": "Ausleihe erfolgreich gelöscht.",
+    "failed": "Ausleihe konnte nicht gelöscht werden. Weitere Details stehen in den Protokollen."
+  },
+  "return": {
+    "successfull": "Spiel erfolgreich als zurückgegeben markiert.",
+    "failed": "Spiel konnte nicht als zurückgegeben markiert werden. Weitere Details stehen in den Protokollen.",
+    "date-failed": "Das Rückgabedatum kann nicht vor dem Ausleihdatum liegen."
+  },
+  "no-active-loans": "Derzeit gibt es keine aktiven Ausleihen.",
+  "new": {
+    "title": "Neue Ausleihe hinzufügen",
+    "save": "Ausleihe erstellen",
+    "description": "Formular ausfüllen, um eine neue Ausleihe zu erstellen.",
+    "start": {
+      "label": "Beginn der Ausleihe",
+      "required": "Ausleihdatum ist erforderlich",
+      "placeholder": "Datum auswählen"
+    },
+    "end": {
+      "label": "Rückgabedatum",
+      "placeholder": "Datum auswählen"
+    },
+    "player": {
+      "label": "Spieler",
+      "required": "Spieler ist erforderlich",
+      "placeholder": "Spieler auswählen"
+    }
+  }
+}

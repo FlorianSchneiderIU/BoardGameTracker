@@ -1,7 +1,9 @@
 import i18n from "i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
 import Backend from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
+
+export const DEFAULT_LANGUAGE = "de-DE";
+export const SUPPORTED_LANGUAGES = ["de-DE", "en-US", "nl-NL", "nl-BE"];
 
 const namespaces = [
 	"version",
@@ -32,26 +34,29 @@ const namespaces = [
 	"auth",
 ] as const;
 
-let translationFilePath = "/locales/{{lng}}/{{ns}}.json";
-if (import.meta.env.DEV) {
-	translationFilePath = "/locales/base/{{ns}}.json";
-}
+// English uses the Crowdin source in development; other languages use their own folders.
+const loadPath = (languages: string[], ns: string[]) => {
+	const language = languages[0];
+	const folder = import.meta.env.DEV && language === "en-US" ? "base" : language;
+	return `/locales/${folder}/${ns[0]}.json`;
+};
 
 void i18n
 	.use(Backend)
-	.use(LanguageDetector)
 	.use(initReactI18next)
 	.init({
 		debug: false,
-		supportedLngs: ["en-US", "nl-NL", "nl-BE"],
+		lng: DEFAULT_LANGUAGE,
+		supportedLngs: SUPPORTED_LANGUAGES,
 		fallbackLng: "en-US",
+		load: "currentOnly",
 		ns: [...namespaces],
 		defaultNS: "common",
 		interpolation: {
 			escapeValue: false,
 		},
 		backend: {
-			loadPath: translationFilePath,
+			loadPath,
 		},
 		react: {
 			useSuspense: true,

@@ -1,0 +1,11 @@
+{
+  "total-shames": "Spiele insgesamt",
+  "total-value": "Gesamtwert der Spiele",
+  "average-value": "Durchschnittlicher Wert der Spiele",
+  "none": {
+    "title": "Keine Spiele auf dem Pile of Shame!",
+    "description": "Glückwunsch! Auf dem Pile of Shame gibt es keine Spiele. Weiterhin viel Freude beim Spielen und Entdecken der Sammlung."
+  },
+  "days-not-played": "Tage ohne Partie",
+  "last-session": "Letzte Partie"
+}

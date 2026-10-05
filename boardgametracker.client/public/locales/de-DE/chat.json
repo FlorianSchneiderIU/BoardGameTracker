@@ -1,0 +1,44 @@
+{
+  "title": "Anleitungsassistent",
+  "menu": "Anleitungs-Chat",
+  "ask-button": "Frage zur Anleitung stellen",
+  "ask-button-disabled": "Vor dem Öffnen des Chats eine Anleitung hochladen",
+  "select-game": "Spiel auswählen",
+  "all-manuals": "Alle Anleitungen",
+  "sources": "Quellen",
+  "untitled-manual": "Anleitung",
+  "page": "Seite {{page}}",
+  "unknown-page": "Unbekannte Seite",
+  "you": "Sie",
+  "assistant": "Assistent",
+  "thinking": "Wird überlegt…",
+  "retry": "Erneut versuchen",
+  "response-time": "Antwort nach {{seconds}}s",
+  "top-match": "Bester Treffer",
+  "image-unavailable": "Seitenvorschau nicht verfügbar",
+  "close": "Schließen",
+  "previous": "Vorherige Seite",
+  "next": "Nächste Seite",
+  "download-manual": "Anleitung herunterladen",
+  "click-to-enlarge": "Zum Vergrößern klicken",
+  "empty": {
+    "no-game": {
+      "title": "Spiel auswählen, um zu beginnen",
+      "description": "Oben ein Spiel auswählen, um Fragen zu seiner Anleitung zu stellen."
+    },
+    "no-manuals": {
+      "title": "Noch keine Anleitung",
+      "description": "Für dieses Spiel gibt es keine Anleitung. Zuerst eine Anleitung auf der Spielseite hochladen."
+    },
+    "not-indexed": {
+      "title": "Anleitung noch nicht bereit",
+      "description": "Die Anleitung wird noch indexiert. Bitte in Kürze erneut versuchen."
+    },
+    "ask-something": "Zum Einstieg eine Frage zu den Regeln stellen."
+  },
+  "composer": {
+    "placeholder": "Frage zu den Regeln stellen…",
+    "disabled-placeholder": "Ein Spiel mit einer indexierten Anleitung auswählen, um eine Frage zu stellen.",
+    "send": "Senden"
+  }
+}

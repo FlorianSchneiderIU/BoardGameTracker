@@ -1,13 +1,16 @@
-import { QueryClient } from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import type { FC, ReactNode } from "react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
-import { render, screen, waitFor } from "@/test/test-utils";
+import { getSettings } from "@/services/queries/settings";
+import { renderWithProviders as render, screen, waitFor } from "@/test/test-utils";
 
 const mocks = vi.hoisted(() => ({
 	navigate: vi.fn(),
 	useMatch: vi.fn(),
 	useLocation: vi.fn(),
 	getEnvironmentCall: vi.fn(),
+	getSettingsCall: vi.fn(),
+	useUiLanguageSync: vi.fn(),
 	initSentry: vi.fn(),
 	authState: {} as {
 		isAuthenticated: boolean;
@@ -35,7 +38,7 @@ vi.mock("@/hooks/useAuth", () => ({
 }));
 
 vi.mock("@/services/settingsService", () => ({
-	getSettingsCall: vi.fn(),
+	getSettingsCall: () => mocks.getSettingsCall(),
 	getEnvironmentCall: () => mocks.getEnvironmentCall(),
 	getLanguagesCall: vi.fn(),
 	getVersionInfoCall: vi.fn(),
@@ -43,6 +46,10 @@ vi.mock("@/services/settingsService", () => ({
 
 vi.mock("@/utils/sentry", () => ({
 	initSentry: () => mocks.initSentry(),
+}));
+
+vi.mock("@/hooks/useUiLanguageSync", () => ({
+	useUiLanguageSync: (language: string | undefined) => mocks.useUiLanguageSync(language),
 }));
 
 vi.mock("react-error-boundary", () => ({
@@ -79,6 +86,47 @@ describe("RootComponent", () => {
 		mocks.useMatch.mockReturnValue(null);
 		mocks.useLocation.mockReturnValue({ pathname: "/", searchStr: "" });
 		mocks.getEnvironmentCall.mockResolvedValue({ enableStatistics: false });
+		mocks.getSettingsCall.mockResolvedValue({ uiLanguage: "de-de" });
+	});
+
+	describe("UI language", () => {
+		it("does not fetch settings until auth status is known", async () => {
+			mocks.authState.authStatus = null;
+			render(<mocks.captured.Root />);
+			await waitFor(() => expect(screen.getByTestId("sidebar")).toBeInTheDocument());
+			expect(mocks.getSettingsCall).not.toHaveBeenCalled();
+		});
+
+		it("applies a changed language after the settings query is invalidated", async () => {
+			const queryClient = mocks.routeContext.queryClient;
+			render(
+				<QueryClientProvider client={queryClient}>
+					<mocks.captured.Root />
+				</QueryClientProvider>,
+			);
+			await waitFor(() => expect(mocks.useUiLanguageSync).toHaveBeenLastCalledWith("de-de"));
+			mocks.getSettingsCall.mockResolvedValue({ uiLanguage: "en-us" });
+			await queryClient.invalidateQueries({ queryKey: getSettings().queryKey });
+			await waitFor(() => expect(mocks.useUiLanguageSync).toHaveBeenLastCalledWith("en-us"));
+		});
+
+		it("applies the settings language once settings are loaded", async () => {
+			render(<mocks.captured.Root />);
+			await waitFor(() => {
+				expect(mocks.useUiLanguageSync).toHaveBeenLastCalledWith("de-de");
+			});
+		});
+
+		it("does not fetch settings while unauthenticated with auth enabled", async () => {
+			mocks.authState.authStatus = { authEnabled: true };
+			mocks.authState.isAuthenticated = false;
+			render(<mocks.captured.Root />);
+			await waitFor(() => {
+				expect(mocks.navigate).toHaveBeenCalled();
+			});
+			expect(mocks.getSettingsCall).not.toHaveBeenCalled();
+			expect(mocks.useUiLanguageSync).not.toHaveBeenCalledWith("de-de");
+		});
 	});
 
 	describe("Loading state", () => {

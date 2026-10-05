@@ -1,0 +1,181 @@
+{
+  "add": "Partie hinzufügen",
+  "sessions": "Partien ansehen",
+  "no-sessions": {
+    "title": "Noch keine Partien erfasst",
+    "description": "Partien erfassen, um detaillierte Statistiken, Spielerleistungen und den Partieverlauf zu sehen. Mit der ersten Partie werden alle Auswertungen verfügbar!",
+    "button": "Erste Partie erfassen",
+    "extra": "Partiedaten enthalten Spieler, Punktzahlen, Dauer und mehr"
+  },
+  "notifications": {
+    "created": "Spiel erfolgreich erstellt",
+    "create-failed": "Spiel konnte nicht erstellt werden",
+    "not-found": "Spiel nicht gefunden",
+    "duplicate": "Spiel existiert bereits",
+    "deleted": "Spiel erfolgreich gelöscht",
+    "updated": "Spiel erfolgreich aktualisiert",
+    "update-failed": "Spiel konnte nicht aktualisiert werden"
+  },
+  "added-date": {
+    "label": "Hinzugefügt am",
+    "required": "Datum ist erforderlich"
+  },
+  "bgg": {
+    "label": "BGG-ID",
+    "placeholder": "BoardGameGeek-Spiel-ID",
+    "required": "BGG-ID ist erforderlich",
+    "external-page": "BoardGameGeek-Website öffnen"
+  },
+  "language": {
+    "label": "Sprache",
+    "none": "Nicht festgelegt"
+  },
+  "language-independent": "Sprachunabhängig",
+  "update": {
+    "save": "Spiel aktualisieren",
+    "title": "Spiel aktualisieren"
+  },
+  "expansions": {
+    "title": "Erweiterungen",
+    "description": "Erweiterungen zu diesem Spiel hinzufügen oder entfernen.",
+    "update": "Erweiterungen aktualisieren",
+    "none": "Keine Erweiterungen zu diesem Spiel hinzugefügt.",
+    "no-game": "Spiel auswählen, um Erweiterungen zu sehen.",
+    "add": "Hinzufügen"
+  },
+  "manuals": {
+    "title": "Anleitungen",
+    "description": "Anleitungen für dieses Spiel hochladen, herunterladen oder löschen.",
+    "none": "Keine Anleitungen für dieses Spiel hochgeladen.",
+    "add": "Hochladen",
+    "upload-success": "Anleitungen erfolgreich hochgeladen.",
+    "upload-failed": "Anleitung konnte nicht hochgeladen werden. Weitere Details stehen in den Protokollen.",
+    "delete-success": "Anleitung erfolgreich gelöscht.",
+    "delete-failed": "Anleitung konnte nicht gelöscht werden. Weitere Details stehen in den Protokollen.",
+    "download-failed": "Anleitung konnte nicht heruntergeladen werden. Weitere Details stehen in den Protokollen.",
+    "status": {
+      "pending": "Ausstehend",
+      "indexing": "Wird indexiert…",
+      "indexed": "Indexiert",
+      "failed": "Fehlgeschlagen"
+    },
+    "reindex": "Erneut indexieren",
+    "reindex-success": "Erneute Indexierung gestartet.",
+    "reindex-failed": "Erneute Indexierung fehlgeschlagen. Weitere Details stehen in den Protokollen."
+  },
+  "new": {
+    "description": "Methode zum Erstellen eines neuen Spiels auswählen.",
+    "save": "Spiel erstellen",
+    "title": "Neues Spiel erstellen",
+    "bgg-title": "Spiel importieren",
+    "bgg-subtext": "Spieldaten von BoardGameGeek importieren",
+    "bgg-description": "Erforderliche Felder ausfüllen, um ein Spiel von BoardGameGeek zu importieren",
+    "manual-title": "Manuelle Eingabe",
+    "manual-subtext": "Daten manuell eingeben, um ein Spiel zu erstellen",
+    "bgg-import-title": "Von BoardGameGeek importieren",
+    "bgg-import-subtext": "Spielesammlung von BoardGameGeek importieren",
+    "manual": {
+      "title": "Spiel erstellen",
+      "game-title": {
+        "required": "Spieltitel ist erforderlich",
+        "label": "Spieltitel"
+      },
+      "year": {
+        "label": "Erscheinungsjahr",
+        "required": "Erscheinungsjahr ist erforderlich"
+      },
+      "min-players": {
+        "label": "Minimale Spieleranzahl"
+      },
+      "max-players": {
+        "label": "Maximale Spieleranzahl"
+      },
+      "min-time": {
+        "label": "Minimale Spielzeit"
+      },
+      "max-time": {
+        "label": "Maximale Spielzeit"
+      },
+      "min-age": {
+        "label": "Mindestalter"
+      },
+      "description": {
+        "label": "Spielbeschreibung"
+      }
+    }
+  },
+  "price": {
+    "label": "Preis",
+    "placeholder": "Spielpreis",
+    "required": "Preis ist erforderlich",
+    "refresh": "Preis aktualisieren",
+    "refresh-failed": "Preis konnte nicht aktualisiert werden",
+    "recheck-queued": "Erneute Prüfung angefordert. Der Preis wird in Kürze aktualisiert",
+    "unavailable": {
+      "misconfigured": "changedetection.io-Einstellungen sind ungültig",
+      "unauthorized": "changedetection.io hat den API-Schlüssel abgelehnt",
+      "watchNotFound": "Diese Überwachung existiert auf changedetection.io nicht mehr",
+      "unreachable": "changedetection.io konnte nicht erreicht werden",
+      "parseError": "Preis konnte von changedetection.io nicht gelesen werden"
+    }
+  },
+  "state": {
+    "for-trade": "Zum Tausch",
+    "label": "Spielstatus",
+    "not-owned": "Nicht im eigenen Besitz",
+    "owned": "Im Besitz",
+    "previously-owned": "Früher im Besitz",
+    "wanted": "Gesucht",
+    "on-loan": "Ausgeliehen"
+  },
+  "details": {
+    "title": "Details zu {{title}}"
+  },
+  "delete": {
+    "successfull": "Spiel erfolgreich gelöscht.",
+    "failed": "Spiel konnte nicht gelöscht werden. Weitere Details stehen in den Protokollen."
+  },
+  "scoring": {
+    "label": "Spiel hat eine Punktewertung"
+  },
+  "charts": {
+    "player-count": "Partien nach Spieleranzahl",
+    "games-week-day": "Partien nach Wochentag",
+    "scoring": "Punktzahlen pro Spiel/Spieler",
+    "top-scoring": {
+      "top-score": "Höchste Punktzahl",
+      "highest-losing": "Höchste Punktzahl bei einer Niederlage",
+      "average": "Durchschnitt",
+      "lowest-winning": "Niedrigste Punktzahl bei einem Sieg",
+      "lowest": "Niedrigste Punktzahl"
+    }
+  },
+  "titles": {
+    "top-players": "Beste Spieler",
+    "scoring-results": "Wertungsergebnisse",
+    "recent-sessions": "Letzte Partien",
+    "session-count-per-day": "Partien pro Tag",
+    "analytics": "Auswertungen"
+  },
+  "watch-id": {
+    "label": "changedetection.io-Überwachungs-ID",
+    "placeholder": "z. B. e0808154-28da-4b85-9a71-24a409e694f1",
+    "invalid": "Gültige Überwachungs-ID (GUID) eingeben",
+    "tracking": "Überwachung: {{title}}",
+    "not-found": "Diese Überwachungs-ID wurde auf changedetection.io nicht gefunden",
+    "unverified": "Diese Überwachungs-ID konnte gerade nicht überprüft werden"
+  },
+  "track-price": {
+    "button": "Preis überwachen",
+    "title": "Preis überwachen",
+    "description": "Shopseite für dieses Spiel eingeben. Eine changedetection.io-Überwachung wird erstellt und mit dem Spiel verknüpft.",
+    "url-label": "Shop-URL",
+    "url-placeholder": "https://...",
+    "submit": "Überwachung starten",
+    "success": "Preisüberwachung gestartet",
+    "failed": "Preisüberwachung konnte nicht gestartet werden"
+  },
+  "current-price": {
+    "title": "Aktueller Preis"
+  }
+}

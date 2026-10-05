@@ -1,0 +1,338 @@
+{
+  "titles": {
+    "localisation": "Regionale Einstellungen",
+    "currency": "Währungseinstellungen",
+    "environment": "Umgebung"
+  },
+  "time-zone": {
+    "label": "Zeitzone",
+    "required": "Zeitzone ist erforderlich"
+  },
+  "date-format": {
+    "label": "Datumsformat",
+    "required": "Datumsformat ist erforderlich"
+  },
+  "time-format": {
+    "label": "Zeitformat",
+    "required": "Zeitformat ist erforderlich"
+  },
+  "currency": {
+    "label": "Währung",
+    "required": "Währung ist erforderlich"
+  },
+  "environment": {
+    "name": "Umgebung",
+    "port": "Port",
+    "statistics": "Statistiken",
+    "log-level": "Protokollierungsstufe",
+    "version": "Version"
+  },
+  "feature-request": "Funktionswunsch",
+  "translations": "App übersetzen",
+  "save": {
+    "button": "Einstellungen speichern",
+    "failed": "Einstellungen konnten nicht gespeichert werden",
+    "successfull": "Einstellungen erfolgreich gespeichert"
+  },
+  "general": {
+    "public-url": {
+      "label": "Öffentliche URL",
+      "placeholder": "https://myboardgametracker.app",
+      "invalid": "Gültige http(s)-URL eingeben"
+    },
+    "ui-language": {
+      "label": "Sprache",
+      "required": "Sprache ist erforderlich"
+    },
+    "title": "Allgemeine Einstellungen",
+    "description": "Allgemeine Einstellungen der Anwendung ändern.",
+    "date-time": {
+      "title": "Datums- und Zeiteinstellungen",
+      "description": "Datums- und Zeitformat der Anwendung festlegen.",
+      "date-format": "Datumsformat",
+      "time-format": "Zeitformat"
+    },
+    "currency": {
+      "title": "Währungseinstellungen",
+      "description": "Währung der Anwendung festlegen.",
+      "label": "Währung"
+    },
+    "language": {
+      "title": "Spracheinstellungen",
+      "description": "Sprache der Anwendung festlegen.",
+      "label": "Sprache"
+    }
+  },
+  "shame": {
+    "title": "Pile-of-Shame-Einstellungen",
+    "description": "Berechnung und Darstellung des Pile of Shame festlegen.",
+    "enabled": {
+      "label": "Pile of Shame aktivieren",
+      "description": "Spiele erfassen, die seit längerer Zeit nicht gespielt wurden."
+    },
+    "months": {
+      "label": "Schwellenwert in Monaten"
+    }
+  },
+  "game-nights": {
+    "title": "Spieleabend-Einstellungen",
+    "description": "Verwaltung und Darstellung von Spieleabenden festlegen.",
+    "enabled": {
+      "label": "Spieleabende aktivieren",
+      "description": "Spieleabende aktivieren, um gemeinsame Spieleabende mit Freunden zu planen und zu verwalten."
+    },
+    "public-url": {
+      "label": "Öffentliche URL",
+      "placeholder": "https://myboardgametracker.app"
+    },
+    "rsvp-authentication": {
+      "label": "Anmeldung für Zusagen erforderlich",
+      "description": "Wenn aktiviert, müssen sich Spieler anmelden, um zu Spieleabenden zuzusagen. Dies erhöht die Sicherheit und hilft, unerwünschte Zusagen zu verhindern."
+    }
+  },
+  "advanced": {
+    "version-track": {
+      "label": "Versionskanal",
+      "description": "Stabile Versionen verwenden oder zu Betaversionen wechseln, um neue Funktionen frühzeitig zu erhalten.",
+      "stable": {
+        "label": "Stabil",
+        "description": "Nur stabile Versionen erhalten."
+      },
+      "beta": {
+        "label": "Beta",
+        "description": "Betaversionen mit frühzeitigem Zugriff auf neue Funktionen erhalten."
+      }
+    },
+    "updates": {
+      "title": "Einstellungen zur Updateprüfung",
+      "description": "Festlegen, wie die Anwendung nach Updates sucht.",
+      "enabled": {
+        "label": "Updateprüfung aktivieren",
+        "description": "Wenn aktiviert, sucht die Anwendung automatisch nach Updates und installiert sie."
+      }
+    },
+    "bug": "Fehler melden",
+    "translate": "Bei der Übersetzung der App helfen",
+    "danger": {
+      "title": "Gefahrenbereich",
+      "description": "Unumkehrbare Aktionen. Mit Vorsicht fortfahren.",
+      "reset": {
+        "button": "Daten zurücksetzen",
+        "confirm": {
+          "title": "Daten zurücksetzen",
+          "description": "Hiermit werden alle Spiele, Partien, Spieler, Personen, Orte, Ausleihen, Spieleabende, verliehenen Abzeichen und hochgeladenen Bilder dauerhaft gelöscht. Einstellungen, Benutzerkonten und Anmeldung bleiben erhalten. Dies kann nicht rückgängig gemacht werden.",
+          "keyword": "RESET",
+          "input-label": "Zur Bestätigung RESET eingeben",
+          "button": "Daten zurücksetzen"
+        }
+      },
+      "factory-reset": {
+        "button": "Auf Werkseinstellungen zurücksetzen",
+        "confirm": {
+          "title": "Auf Werkseinstellungen zurücksetzen",
+          "description": "Hiermit wird ALLES dauerhaft gelöscht: alle Daten, Einstellungen und Benutzerkonten. Die App wird auf ihren Ausgangszustand zurückgesetzt. Die Standardanmeldung für den Administrator (admin / admin) wird neu erstellt und Sie werden abgemeldet. Dieses Passwort sofort ändern. Dies kann nicht rückgängig gemacht werden.",
+          "keyword": "FACTORY RESET",
+          "input-label": "Zur Bestätigung FACTORY RESET eingeben",
+          "button": "Alles auf Werkseinstellungen zurücksetzen"
+        }
+      },
+      "notifications": {
+        "reset-success": "Daten erfolgreich zurückgesetzt",
+        "reset-failed": "Daten konnten nicht zurückgesetzt werden",
+        "factory-reset-failed": "Zurücksetzen auf Werkseinstellungen fehlgeschlagen"
+      }
+    }
+  },
+  "sidebar": {
+    "general": {
+      "title": "Allgemein",
+      "description": "Grundlegende App-Konfiguration"
+    },
+    "shelf-of-shame": {
+      "title": "Pile of Shame",
+      "description": "Pile-of-Shame-Einstellungen festlegen"
+    },
+    "advanced": {
+      "title": "Erweitert",
+      "description": "Erweiterte App-Konfiguration"
+    },
+    "game-nights": {
+      "title": "Spieleabende",
+      "description": "Spieleabend-Einstellungen festlegen"
+    },
+    "bgg": {
+      "title": "Integrationen",
+      "description": "BoardGameGeek und Preisüberwachung"
+    },
+    "account": {
+      "title": "Konto",
+      "description": "Profil und Benutzerverwaltung"
+    }
+  },
+  "bgg": {
+    "title": "BoardGameGeek-API",
+    "description": "BGG-API-Schlüssel konfigurieren, um Spiele auf BoardGameGeek zu suchen und zu importieren.",
+    "status": {
+      "title": "Status",
+      "configured": "API-Schlüssel konfiguriert",
+      "not-configured": "API-Schlüssel nicht konfiguriert",
+      "source-env": "BGG-API-Schlüssel wird über die Umgebungsvariable BGG_API_KEY festgelegt",
+      "source-db": "BGG-API-Schlüssel ist in der Datenbank gespeichert.",
+      "not-configured-description": "Für die BGG-Integration ist ein BGG-API-Schlüssel erforderlich. Er kann über die Umgebungsvariable BGG_API_KEY oder direkt in den folgenden Einstellungen festgelegt werden."
+    },
+    "api-key": {
+      "label": "BGG-API-Schlüssel",
+      "placeholder": "BGG-API-Schlüssel eingeben",
+      "save": "API-Schlüssel speichern",
+      "clear": "API-Schlüssel entfernen",
+      "clear-hint": "Einstellungen speichern, um das Entfernen zu übernehmen.",
+      "read-only": "Der API-Schlüssel ist schreibgeschützt.",
+      "read-only-description": "Der API-Schlüssel wird über die Umgebungsvariable BGG_API_KEY verwaltet und kann hier nicht geändert werden.",
+      "help-title": "BGG-API-Nutzung",
+      "help-description": "Mit der BGG-API kann die App Spieldaten suchen und importieren, die Sammlung importieren und mehr. Ein API-Schlüssel kann anhand der Anleitung auf der BoardGameGeek-<requestPage>Anfrageseite</requestPage> angefordert werden."
+    },
+    "notifications": {
+      "saved": "BGG-API-Schlüssel erfolgreich gespeichert",
+      "save-failed": "BGG-API-Schlüssel konnte nicht gespeichert werden",
+      "cleared": "BGG-API-Schlüssel entfernt",
+      "clear-failed": "BGG-API-Schlüssel konnte nicht entfernt werden"
+    }
+  },
+  "account": {
+    "profile": {
+      "title": "Mein Konto",
+      "description": "Profil und Passwort verwalten.",
+      "display-name": {
+        "label": "Anzeigename"
+      },
+      "email": {
+        "label": "E-Mail"
+      },
+      "username": {
+        "label": "Benutzername"
+      },
+      "player": {
+        "label": "Verknüpfter Spieler",
+        "none": "Nicht verknüpft"
+      },
+      "save": "Profil speichern"
+    },
+    "password": {
+      "change-button": "Passwort ändern",
+      "title": "Passwort ändern",
+      "description": "Aktuelles Passwort eingeben und ein neues wählen.",
+      "current": {
+        "label": "Aktuelles Passwort"
+      },
+      "new": {
+        "label": "Neues Passwort"
+      },
+      "confirm": {
+        "label": "Neues Passwort bestätigen"
+      },
+      "min-length": "Passwort muss mindestens 4 Zeichen lang sein",
+      "mismatch": "Passwörter stimmen nicht überein",
+      "save": "Passwort ändern"
+    },
+    "users": {
+      "title": "Benutzerverwaltung",
+      "description": "Benutzerkonten erstellen und verwalten.",
+      "last-login": "Letzte Anmeldung",
+      "role": "Rolle",
+      "roles": {
+        "user": "Benutzer",
+        "reader": "Leser",
+        "admin": "Administrator"
+      },
+      "player": {
+        "label": "Verknüpfter Spieler",
+        "none": "Nicht verknüpft"
+      },
+      "create-button": "Benutzer erstellen",
+      "create": {
+        "title": "Neuen Benutzer erstellen",
+        "description": "Formular ausfüllen, um einen neuen Benutzer zu erstellen.",
+        "username": {
+          "label": "Benutzername"
+        },
+        "email": {
+          "label": "E-Mail"
+        },
+        "password": {
+          "label": "Passwort"
+        },
+        "display-name": {
+          "label": "Anzeigename"
+        },
+        "player": {
+          "label": "Spieler",
+          "create": "Neuen Spieler erstellen",
+          "link": "Vorhandenen Spieler verknüpfen",
+          "none": "Kein Spieler"
+        },
+        "save": "Benutzer erstellen"
+      },
+      "edit": {
+        "title": "Benutzer bearbeiten",
+        "description": "Rolle für \"{{username}}\" ändern."
+      },
+      "reset-password": {
+        "button": "Passwort zurücksetzen"
+      },
+      "temp-password": {
+        "title": "Temporäres Passwort",
+        "description": "Passwort für \"{{username}}\" zurückgesetzt. Dieses Passwort speichern; es wird nicht erneut angezeigt.",
+        "copy": "In die Zwischenablage kopieren",
+        "copied": "Kopiert!"
+      },
+      "delete": {
+        "title": "Benutzer löschen",
+        "description": "Soll \"{{username}}\" gelöscht werden? Dies kann nicht rückgängig gemacht werden."
+      },
+      "never-logged-in": "Nie"
+    },
+    "notifications": {
+      "profile-updated": "Profil erfolgreich aktualisiert",
+      "profile-update-failed": "Profil konnte nicht aktualisiert werden",
+      "password-changed": "Passwort erfolgreich geändert",
+      "password-change-failed": "Passwort konnte nicht geändert werden. Bitte das aktuelle Passwort prüfen.",
+      "user-created": "Benutzer erfolgreich erstellt",
+      "user-create-failed": "Benutzer konnte nicht erstellt werden",
+      "user-deleted": "Benutzer erfolgreich gelöscht",
+      "user-delete-failed": "Benutzer konnte nicht gelöscht werden",
+      "role-updated": "Benutzerrolle erfolgreich aktualisiert",
+      "role-update-failed": "Benutzerrolle konnte nicht aktualisiert werden",
+      "user-updated": "Benutzer erfolgreich aktualisiert",
+      "user-update-failed": "Benutzer konnte nicht aktualisiert werden",
+      "password-reset-failed": "Passwort konnte nicht zurückgesetzt werden"
+    }
+  },
+  "changedetection": {
+    "title": "changedetection.io",
+    "description": "Eine changedetection.io-Instanz konfigurieren, um aktuelle Preise und Verfügbarkeit für Spiele mit einer Überwachungs-ID abzurufen.",
+    "status": {
+      "configured": "Konfiguriert",
+      "not-configured": "Nicht konfiguriert",
+      "source-db": "Konfiguriert und in der Datenbank gespeichert.",
+      "not-configured-description": "Basis-URL und API-Schlüssel der changedetection.io-Instanz eingeben, um aktuelle Preise und Verfügbarkeit abzurufen."
+    },
+    "base-url": {
+      "label": "Basis-URL",
+      "placeholder": "https://changes.example.com",
+      "invalid": "Gültige http(s)-URL eingeben"
+    },
+    "api-key": {
+      "label": "API-Schlüssel",
+      "placeholder": "changedetection.io-API-Schlüssel eingeben",
+      "clear": "API-Schlüssel entfernen",
+      "clear-hint": "Einstellungen speichern, um das Entfernen zu übernehmen."
+    },
+    "help-title": "So funktioniert es",
+    "help-description": "Eine changedetection.io-Überwachungs-ID zu einem Spiel hinzufügen, um den aktuellen Preis und die Verfügbarkeit zu sehen. Der API-Schlüssel befindet sich unter Settings in der changedetection.io-Instanz.",
+    "test": {
+      "button": "Verbindung testen",
+      "success": "Mit changedetection.io {{version}} verbunden",
+      "failed": "Verbindung zu changedetection.io fehlgeschlagen. Bitte URL und API-Schlüssel prüfen"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "label": "Erweiterungen",
+  "delete": {
+    "successfull": "Erweiterung erfolgreich gelöscht.",
+    "failed": "Erweiterung konnte nicht gelöscht werden. Weitere Details stehen in den Protokollen."
+  }
+}
